@@ -184,6 +184,7 @@ function Loopy(config){
 		// Hide all that UI
 		self.toolbar.dom.style.display = "none";
 		self.sidebar.dom.style.display = "none";
+		self.playbar.dom.style.display = "none";
 
 		// Fullscreen canvas
 		document.getElementById("canvasses").setAttribute("fullscreen","yes");
