@@ -51,7 +51,8 @@ function Node(model, config){
 	// MOUSE.
 	var _controlsVisible = false;
 	var _controlsAlpha = 0;
-	var _controlsDirection = 0;
+	var 
+	= 0;
 	var _controlsSelected = false;
 	var _controlsPressed = false;	
 	var _listenerMouseMove = subscribe("mousemove", function(){
@@ -64,7 +65,7 @@ function Node(model, config){
 		if(_controlsSelected){
 			_controlsVisible = true;
 			self.loopy.showPlayTutorial = false;
-			_controlsDirection = (Mouse.y<self.y) ? 1 : -1;
+			_controlsDirection = 1;
 		}else{
 			_controlsVisible = false;
 			_controlsDirection = 0;
@@ -270,14 +271,6 @@ function Node(model, config){
 		ctx.lineTo(0,-cy-cl*2);
 		ctx.lineTo(cl,-cy-cl);
 		ctx.lineWidth = (_controlsDirection>0) ? 10: 3;
-		if(self.loopy.showPlayTutorial) ctx.lineWidth=6;
-		ctx.stroke();
-		// bottom arrow
-		ctx.beginPath();
-		ctx.moveTo(-cl,cy+cl);
-		ctx.lineTo(0,cy+cl*2);
-		ctx.lineTo(cl,cy+cl);
-		ctx.lineWidth = (_controlsDirection<0) ? 10: 3;
 		if(self.loopy.showPlayTutorial) ctx.lineWidth=6;
 		ctx.stroke();
 
