@@ -51,8 +51,7 @@ function Node(model, config){
 	// MOUSE.
 	var _controlsVisible = false;
 	var _controlsAlpha = 0;
-	var 
-	= 0;
+	var _controlsDirection = 0;
 	var _controlsSelected = false;
 	var _controlsPressed = false;	
 	var _listenerMouseMove = subscribe("mousemove", function(){
