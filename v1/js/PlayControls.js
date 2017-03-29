@@ -48,23 +48,7 @@ function PlayControls(loopy){
 	(function(){
 		var page = new Page();
 
-		if(loopy.embedded){
-
-			// Reset | Remix
-
-			// RESET
-			var buttonDOM = page.addComponent(new PlayButton({
-				icon: 2,
-				label: "Reset",
-				onclick: function(){
-					publish("model/reset");
-				}
-			})).dom;
-			buttonDOM.style.width = "100px";
-			buttonDOM.style.left = "0px";
-			buttonDOM.style.top = "0px";
-
-		}else{
+		if(!loopy.embedded){
 
 			// Stop | Reset
 
@@ -92,19 +76,19 @@ function PlayControls(loopy){
 			buttonDOM.style.right = "0px";
 			buttonDOM.style.top = "0px";
 
+			// SPEED SLIDER
+			var speedSlider = page.addComponent(new PlaySlider({
+				value: loopy.signalSpeed,
+				min:0, max:6, step:0.2,
+				oninput: function(value){
+					loopy.signalSpeed = value;
+				}
+			})).dom;
+			speedSlider.style.bottom = "0px";
+
+			self.addPage("Player", page);
+
 		}
-
-		// SPEED SLIDER
-		var speedSlider = page.addComponent(new PlaySlider({
-			value: loopy.signalSpeed,
-			min:0, max:6, step:0.2,
-			oninput: function(value){
-				loopy.signalSpeed = value;
-			}
-		})).dom;
-		speedSlider.style.bottom = "0px";
-
-		self.addPage("Player", page);
 
 	})();
 	
