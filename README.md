@@ -2,6 +2,8 @@
 
 ### [LOOPY - a tool for thinking in systems](http://ncase.me/loopy/)
 
+This is a Material Motion-maintained fork.
+
 [Zero Rights Reserved](http://creativecommons.org/publicdomain/zero/1.0/): 
 LOOPY is entirely open source/public domain.
 
