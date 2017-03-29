@@ -64,19 +64,6 @@ function PlayControls(loopy){
 			buttonDOM.style.left = "0px";
 			buttonDOM.style.top = "0px";
 
-			// REMIX BUTTON
-			var buttonDOM = page.addComponent(new PlayButton({
-				icon: 3,
-				label: "Remix",
-				onclick: function(){
-					var url = loopy.saveToURL();
-					window.open(url,'_blank');
-				}
-			})).dom;
-			buttonDOM.style.width = "100px";
-			buttonDOM.style.right = "0px";
-			buttonDOM.style.top = "0px";
-
 		}else{
 
 			// Stop | Reset
