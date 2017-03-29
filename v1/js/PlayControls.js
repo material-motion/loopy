@@ -46,9 +46,9 @@ function PlayControls(loopy){
 
 	// During the Player
 	(function(){
-		var page = new Page();
 
 		if(!loopy.embedded){
+			var page = new Page();
 
 			// Stop | Reset
 
